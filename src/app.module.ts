@@ -6,6 +6,7 @@ import { ProductsModule } from './products/products.module';
 import { OrdersModule } from './orders/orders.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { SeedModule } from './seed/seed.module';
 
 @Module({
   imports: [
@@ -22,6 +23,9 @@ import { AppService } from './app.service';
     UsersModule,
     ProductsModule,
     OrdersModule,
+
+    // Seed module (for seeding the database)
+    SeedModule,
   ],
   controllers: [AppController],
   providers: [AppService],
