@@ -7,6 +7,7 @@ import { OrdersModule } from './orders/orders.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { SeedModule } from './seed/seed.module';
+import { ReportsModule } from './reports/reports.module';
 
 @Module({
   imports: [
@@ -16,15 +17,16 @@ import { SeedModule } from './seed/seed.module';
       envFilePath: '.env',
     }),
 
-    // Database connection (TypeORM)
+    // Database connection
     DatabaseModule,
 
     // Feature modules
     UsersModule,
     ProductsModule,
     OrdersModule,
+    ReportsModule,
 
-    // Seed module (for seeding the database)
+    // Seed module
     SeedModule,
   ],
   controllers: [AppController],
