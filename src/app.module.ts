@@ -8,6 +8,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { SeedModule } from './seed/seed.module';
 import { ReportsModule } from './reports/reports.module';
+import { AuthModule } from './auth/auth.module';
+import { RedisModule } from './redis/redis.module';
 
 @Module({
   imports: [
@@ -19,6 +21,10 @@ import { ReportsModule } from './reports/reports.module';
 
     // Database connection
     DatabaseModule,
+
+    // Authentication module
+    AuthModule,
+    RedisModule,
 
     // Feature modules
     UsersModule,

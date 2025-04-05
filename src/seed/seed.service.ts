@@ -105,7 +105,7 @@ export class SeedService {
                     order,
                     product,
                     quantity,
-                    price: product.price, // Store unit price
+                    price: product.price,
                 });
                 await this.orderItemRepository.save(orderItem);
 
