@@ -119,9 +119,12 @@ export class SeedService {
 
         console.log('Seeding completed successfully!');
         return {
-            users: users.length,
-            products: products.length,
-            orders: orders.length,
+            message: 'Database seeded successfully',
+            data: {
+                users: users.length,
+                products: products.length,
+                orders: orders.length,
+            }
         };
     }
 
@@ -131,5 +134,8 @@ export class SeedService {
         await this.productRepository.delete({});
         await this.userRepository.delete({});
         console.log('Database cleared');
+        return {
+            message: 'Database cleared successfully',
+        };
     }
 }
